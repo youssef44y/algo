@@ -1,0 +1,45 @@
+ALGORITHM SENTENCE
+
+VAR
+
+   L,W,V:= INTEGER ; // L: Length, W: Words, V: Vowels.
+
+   S:= STRING ; // S: Sentence
+
+BEGIN
+
+  l:= 0 ;
+
+  W:= 1 ;
+
+  V:= 0;
+
+  write("type the sentence")
+
+  read(S)
+
+REPEAT
+
+   IF (S[L]=" ") THEN
+
+       W:=W+1 ;
+
+   END_IF
+
+  IF (S[L] in ["a","e","u","i","o","y"]) THEN
+
+   V:= V+1 ;
+
+   END_IF
+
+   L := L+1 ;
+
+UNTIL (sentc[L]=".")
+
+write( "le nombre de caractere est ",L+1 )
+
+write (" le nombre de mot est ",W)
+
+write (" le nombre de voyelle est ",V)
+
+END
